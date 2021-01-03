@@ -9,9 +9,10 @@ public class HighLowGame {
 
 	public static void main(String[] args) {
 		// 3. Change this line to give you a random number between 1 - 100. 
+		int random = new Random().nextInt(101-1)+1;
+		for (int i = 0; i < 10 ; i++) {
 		String geuss = JOptionPane.showInputDialog("Guess the number!");
 		int guess = Integer.parseInt(geuss);
-		int random = new Random().nextInt(101-1)+1;
 		if (guess == random) {
 			JOptionPane.showMessageDialog(null, "You win!");
 			System.exit(0);
@@ -22,6 +23,8 @@ public class HighLowGame {
 		else {
 			JOptionPane.showMessageDialog(null, "Too high!");
 		}
+		}
+		JOptionPane.showMessageDialog(null, "You lose!");
 	
 		// 2. Print out the random variable above
 		
